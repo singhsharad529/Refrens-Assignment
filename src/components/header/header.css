@@ -10,6 +10,12 @@
     margin: auto;
 }
 
+.header-active{
+    color: #E36414;
+    font-weight: bold;
+    /* background-color: blue; */
+}
+
 .navbar{
     box-shadow: 0px 5px 10px 0px #aaa;
     /* position: fixed; */
@@ -34,10 +40,12 @@
 .logo{
     order: 1;
     font-size: 2.3rem;
+    color: #5F0F40;
 }
 
 .logo-subheading{
     font-size: 1.0rem;
+    color: #FB8B24;
 }
 
 .menu-items li{
@@ -47,14 +55,13 @@
 }
 
 .navbar a{
-    color: #444;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar a:hover{
-    color: #117964;
+    color: #FB8B24;
 }
 
 @media (max-width: 768px){
