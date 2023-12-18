@@ -12,24 +12,21 @@
     font-family: arial;
     margin-top: 20px;
     margin-bottom: 10px;
+    border-radius: 0.25rem;
   }
   
-  .title {
-    color: grey;
-    font-size: 18px;
+  .character-info p {
+    color: #5F0F40;
+    font-size: 1.1rem;
+  }
+
+  .separation{
+    border-top: 1px dotted;
+    border-bottom: none;
   }
   
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+  .character-info .info-value{
+    color: #E36414;
   }
   
   a {
