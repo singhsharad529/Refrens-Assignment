@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 
 /*
-Header Component
+    - Header Component
 */
 
 export const Header = () => {

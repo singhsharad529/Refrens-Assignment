@@ -10,7 +10,7 @@
     width: calc(33.33% - 10px); 
     text-align: center;
     font-family: arial;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 10px;
     border-radius: 0.25rem;
   }
@@ -28,7 +28,14 @@
   .character-info .info-value{
     color: #E36414;
   }
+
+    
   
+    .character-img{
+      width: 90%;
+        margin-top: 13px;
+        border-radius: 0.25rem;
+    }
   a {
     text-decoration: none;
     font-size: 22px;

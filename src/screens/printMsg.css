@@ -1,0 +1,19 @@
+.print-msg {
+    /* background-color: #E36414; */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 5px 6px 7px grey;
+    border-radius: 0.25rem;
+}
+
+.error{
+    background-color: #E36414;
+}
+
+.notmatched{
+    background-color: rgb(151 151 229);;
+}
+

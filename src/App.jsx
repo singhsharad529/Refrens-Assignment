@@ -13,12 +13,18 @@ import { Episodes } from "./components/episodesCards/Episodes";
 import CharacterContextLayout from "./context/characterContext/CharacterContextLayout";
 import { CharacterProfile } from "./components/charactersProfile/CharacterProfile";
 
+/*
+  - Main component 
+  - Contains routes by using react-router-dom
+  
+*/
+
 function App() {
   return (
     <>
       <Router>
         <Header />
-        <div className="middle-section container">
+        <div className="middle-section">
           <Routes>
             <Route path="/" element={<Navigate to="/characters" />} />
             <Route element={<CharacterContextLayout />}>
