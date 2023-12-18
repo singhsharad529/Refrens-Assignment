@@ -11,6 +11,7 @@ import {
 import { Locations } from "./components/locationCards/Locations";
 import { Episodes } from "./components/episodesCards/Episodes";
 import CharacterContextLayout from "./context/characterContext/CharacterContextLayout";
+import { CharacterProfile } from "./components/charactersProfile/CharacterProfile";
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
             <Route path="/" element={<Navigate to="/characters" />} />
             <Route element={<CharacterContextLayout />}>
               <Route exact path="/characters" element={<Characters />} />
+              <Route
+                exact
+                path="/characters/:id"
+                element={<CharacterProfile />}
+              />
             </Route>
             <Route exact path="/episodes" element={<Episodes />} />
             <Route exact path="/locations" element={<Locations />} />
