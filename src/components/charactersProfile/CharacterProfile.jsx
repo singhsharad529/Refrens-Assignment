@@ -22,7 +22,7 @@ export const CharacterProfile = () => {
   useEffect(() => {
     const characterData = characters.filter((char) => char.id == id);
     setCharacter(characterData[0]);
-  }, [characters]);
+  }, [characters, id]);
 
   return (
     <>

@@ -1,5 +1,5 @@
-import React from "react";
 import "./characterSearchBar.css";
+import { PropTypes } from "prop-types";
 
 /*
     - Component to search a character by its name.
@@ -25,4 +25,9 @@ export const CharacterSearchBar = (props) => {
       </div>
     </div>
   );
+};
+
+//prop type for CharacterSearchBar Component
+CharacterSearchBar.propTypes = {
+  characterSearchFun: PropTypes.func,
 };

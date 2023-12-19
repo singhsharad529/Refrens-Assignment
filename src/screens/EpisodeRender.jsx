@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import EpisodeContext from "../context/episodeContext/episodeContext";
-import CharacterContext from "../context/characterContext/charactersContext";
 import { PrintMsg } from "./PrintMsg";
+import { PropTypes } from "prop-types";
 
 /*
   - This is a screen component which only renders all the episodes name.
@@ -46,4 +46,9 @@ export const EpisodeRender = ({ character }) => {
       )}
     </div>
   );
+};
+
+//prop type for EpisodeRender Component
+EpisodeRender.propTypes = {
+  character: PropTypes.object,
 };

@@ -1,4 +1,5 @@
 import "./printMsg.css";
+import { PropTypes } from "prop-types";
 
 /*
   - This is a print component
@@ -12,4 +13,10 @@ export const PrintMsg = (props) => {
   // Combine constant string and dynamic prop value for className
   const combinedClassName = `${fixedClassName} ${props.msg}`;
   return <div className={combinedClassName}>{props.children}</div>;
+};
+
+//prop type for PrintMsg Component
+PrintMsg.propTypes = {
+  msg: PropTypes.string,
+  children: PropTypes.node,
 };

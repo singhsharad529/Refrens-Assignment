@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CharacterContext from "./charactersContext";
+import { PropTypes } from "prop-types";
 
 /*
   - This is context provider component to manage characters state.
@@ -33,6 +34,11 @@ const CharacterContextProvider = ({ children }) => {
       {children}
     </CharacterContext.Provider>
   );
+};
+
+//prop type for CharacterContextProvider Component
+CharacterContextProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export default CharacterContextProvider;

@@ -1,4 +1,5 @@
 import "./CharacterFilterBar.css";
+import { PropTypes } from "prop-types";
 
 /*
   - Character Filter Bar component.
@@ -9,7 +10,6 @@ import "./CharacterFilterBar.css";
 
 export const CharacterFilterBar = (props) => {
   const setFilterOptionsForCharacters = (e) => {
-    console.log("insdie filter", e.target.name, " ", e.target.value);
     props.filterOptionsFun(e);
   };
 
@@ -79,4 +79,9 @@ export const CharacterFilterBar = (props) => {
       </div>
     </div>
   );
+};
+
+//prop type for CharacterFilterBar Component
+CharacterFilterBar.propTypes = {
+  filterOptionsFun: PropTypes.func,
 };

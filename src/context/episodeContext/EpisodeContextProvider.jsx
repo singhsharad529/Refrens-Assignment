@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import EpisodeContext from "./episodeContext";
-
+import { PropTypes } from "prop-types";
 /*
   - This is context provider component to manage episodes state.
   - Whichever Children element comes inside this provider , can consume episodes state.
@@ -33,4 +33,9 @@ export const EpisodeContextProvider = ({ children }) => {
       {children}
     </EpisodeContext.Provider>
   );
+};
+
+//prop type for EpisodeContextProvider Component
+EpisodeContextProvider.propTypes = {
+  children: PropTypes.node,
 };
