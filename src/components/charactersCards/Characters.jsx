@@ -13,23 +13,34 @@ import { PrintMsg } from "../../screens/PrintMsg";
 */
 
 export const Characters = () => {
+  // state to set name to search by name
   const [searchName, setsearchName] = useState("");
+  // state to store all filter options
   const [filterOptions, setfilterOptions] = useState({
     status: "",
     gender: "",
     species: "",
     type: "",
   });
+
   const { characters, error } = useContext(CharacterContext);
-  console.log(error);
+
+  // function to set search name 
   const characterSearchFun = (msg) => {
     setsearchName(msg);
   };
 
+  // function to set all filter options
+  const filterOptionsFun=(e)=>{
+    // console.log(e.target.name,' ',e.target.value);
+    setfilterOptions(prev=>({...prev,[e.target.name]:e.target.value}));
+    console.log(filterOptions);
+  }
+
   return (
     <>
       <div>
-        <CharacterFilterBar />
+        <CharacterFilterBar filterOptionsFun={filterOptionsFun} />
       </div>
       <div>
         <CharacterSearchBar characterSearchFun={characterSearchFun} />
@@ -38,15 +49,20 @@ export const Characters = () => {
         {/* rendering characters data */}
         {characters &&
           characters
-            .filter((filteredName) =>
-              filteredName.name.toLowerCase().includes(searchName.toLowerCase())
+            .filter((characterForFilter) =>
+            characterForFilter.name.toLowerCase().includes(searchName.toLowerCase())
+            && (filterOptions.gender=='' || characterForFilter.gender.toLowerCase()==filterOptions.gender.toLowerCase())
+            && (filterOptions.status=='' || characterForFilter.status.toLowerCase()==filterOptions.status.toLowerCase())
+            && (filterOptions.species=='' || characterForFilter.species.toLowerCase()==filterOptions.species.toLowerCase())
+            && (filterOptions.type=='' || characterForFilter.type.toLowerCase()==filterOptions.type.toLowerCase())
+            
             )
-            .map((character, index) => (
+            .map((character) => (
               <Link
                 id="routernavlink"
                 key={character.id}
                 className="card"
-                to="#"
+                to={`/characters/${character.id}`}
               >
                 <img
                   className="character-img"
@@ -59,7 +75,7 @@ export const Characters = () => {
                   style={{
                     textAlign: "left",
                     margin: "0 auto",
-                    padding: "10px",
+                    padding: "17px",
                   }}
                 >
                   <h3>{character.name}</h3>
@@ -96,8 +112,12 @@ export const Characters = () => {
         {!error &&
           searchName &&
           characters &&
-          characters.filter((filteredName) =>
-            filteredName.name.toLowerCase().includes(searchName.toLowerCase())
+          characters.filter((characterForFilter) =>
+          characterForFilter.name.toLowerCase().includes(searchName.toLowerCase())
+          && (filterOptions.gender=='' || characterForFilter.gender.toLowerCase()==filterOptions.gender.toLowerCase())
+          && (filterOptions.status=='' || characterForFilter.status.toLowerCase()==filterOptions.status.toLowerCase())
+          && (filterOptions.species=='' || characterForFilter.species.toLowerCase()==filterOptions.species.toLowerCase())
+          && (filterOptions.type=='' || characterForFilter.type.toLowerCase()==filterOptions.type.toLowerCase())
           ).length === 0 && <PrintMsg msg={"notmatched"}>Not Matched</PrintMsg>}
 
         {/* when an error occured */}

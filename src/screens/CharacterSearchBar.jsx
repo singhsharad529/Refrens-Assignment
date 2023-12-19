@@ -19,7 +19,7 @@ export const CharacterSearchBar = (props) => {
       <div className="category-search">
         <input
           type="text"
-          placeholder="Search your character name..."
+          placeholder="Search your character by name..."
           onChange={searchValue}
         />
       </div>

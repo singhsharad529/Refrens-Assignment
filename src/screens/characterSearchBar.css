@@ -21,7 +21,7 @@
         border: 1px solid #b1b1b1;
         box-shadow: 5px 7px 5px -2px #F0F0F0;
         padding: 3px;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .category-search input:focus::placeholder {
@@ -32,7 +32,7 @@
     @media (max-width: 992px) {
 
         .category-search input {
-            width: 100%;
+            width: 98%;
         }
 
     }
@@ -48,6 +48,12 @@
 
         .heading-big {
             display: none;
+        }
+        .category-search input {
+            font-size: 15px;
+        }
+        .category-search input {
+            width: 92%;
         }
     }
 

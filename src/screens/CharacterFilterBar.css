@@ -1,0 +1,30 @@
+
+
+.select-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-container div{
+    margin: 5px;
+}
+
+.select-container div select{
+ 
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 33px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 12px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+  border-radius: 0.25rem;
+}
