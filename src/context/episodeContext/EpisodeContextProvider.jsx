@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import EpisodeContext from "./episodeContext";
 
-
 /*
-  - This is context provider component to manage characters state
-  - Whichever Children element comes inside this provider , will get characters state
+  - This is context provider component to manage episodes state.
+  - Whichever Children element comes inside this provider , can consume episodes state.
 */
 
 export const EpisodeContextProvider = ({ children }) => {
@@ -35,4 +34,3 @@ export const EpisodeContextProvider = ({ children }) => {
     </EpisodeContext.Provider>
   );
 };
-

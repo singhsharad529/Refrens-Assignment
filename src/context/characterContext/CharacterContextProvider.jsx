@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import CharacterContext from "./charactersContext";
 
 /*
-  - This is context provider component to manage characters state
-  - Whichever Children element comes inside this provider , will get characters state
+  - This is context provider component to manage characters state.
+  - Whichever Children element comes inside this provider , can consume characters state.
 */
 
 const CharacterContextProvider = ({ children }) => {

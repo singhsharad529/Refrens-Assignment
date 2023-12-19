@@ -27,6 +27,11 @@ function App() {
         <div className="middle-section">
           <Routes>
             <Route path="/" element={<Navigate to="/characters" />} />
+            {/*
+                - Character and Character Profile are wrapped under Character provider.
+                - CharacterContextLayout is a character provider which gives a layout.
+                - This Layout helps us to wrap components inside context provider
+              */}
             <Route element={<CharacterContextLayout />}>
               <Route exact path="/characters" element={<Characters />} />
               <Route

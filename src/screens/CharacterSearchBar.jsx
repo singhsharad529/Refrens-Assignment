@@ -2,9 +2,9 @@ import React from "react";
 import "./characterSearchBar.css";
 
 /*
-    - component to search a character by its name
-    - providing a search value from search bar and executing characterSearchFun 
-    - characterSearchFun defined in the Characters component
+    - Component to search a character by its name.
+    - Providing a search value from search bar and executing characterSearchFun.
+    - CharacterSearchFun defined in the Characters component.
 */
 
 export const CharacterSearchBar = (props) => {

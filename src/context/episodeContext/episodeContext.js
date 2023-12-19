@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
 /*
-    - creating a context api for characters
-    - creating and exporing Character context
+    - creating a context api for episodes
+    - creating and exporing episodes context
 */
 
 const EpisodeContext = createContext();

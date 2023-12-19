@@ -1,5 +1,11 @@
 import "./printMsg.css";
 
+/*
+  - This is a print component
+  - It will will print its children element with given class color
+  - It takes children and class name to print msg and define background color of that msg
+*/
+
 export const PrintMsg = (props) => {
   const fixedClassName = "print-msg";
 

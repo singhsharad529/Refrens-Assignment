@@ -7,9 +7,9 @@ import { CharacterFilterBar } from "../../screens/CharacterFilterBar";
 import { PrintMsg } from "../../screens/PrintMsg";
 
 /*
-    - This will print all the characters with there information 
-    - The rendering will be happend with sorting logics 
-    - e.g: filtering based on parameters or search by name
+    - This will print all the characters with there information.
+    - The rendering will be happend with sorting logics.
+    - e.g: filtering based on parameters or search by name.
 */
 
 export const Characters = () => {
@@ -25,17 +25,17 @@ export const Characters = () => {
 
   const { characters, error } = useContext(CharacterContext);
 
-  // function to set search name 
+  // function to set search name
   const characterSearchFun = (msg) => {
     setsearchName(msg);
   };
 
   // function to set all filter options
-  const filterOptionsFun=(e)=>{
+  const filterOptionsFun = (e) => {
     // console.log(e.target.name,' ',e.target.value);
-    setfilterOptions(prev=>({...prev,[e.target.name]:e.target.value}));
+    setfilterOptions((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     console.log(filterOptions);
-  }
+  };
 
   return (
     <>
@@ -49,13 +49,23 @@ export const Characters = () => {
         {/* rendering characters data */}
         {characters &&
           characters
-            .filter((characterForFilter) =>
-            characterForFilter.name.toLowerCase().includes(searchName.toLowerCase())
-            && (filterOptions.gender=='' || characterForFilter.gender.toLowerCase()==filterOptions.gender.toLowerCase())
-            && (filterOptions.status=='' || characterForFilter.status.toLowerCase()==filterOptions.status.toLowerCase())
-            && (filterOptions.species=='' || characterForFilter.species.toLowerCase()==filterOptions.species.toLowerCase())
-            && (filterOptions.type=='' || characterForFilter.type.toLowerCase()==filterOptions.type.toLowerCase())
-            
+            .filter(
+              (characterForFilter) =>
+                characterForFilter.name
+                  .toLowerCase()
+                  .includes(searchName.toLowerCase()) &&
+                (filterOptions.gender == "" ||
+                  characterForFilter.gender.toLowerCase() ==
+                    filterOptions.gender.toLowerCase()) &&
+                (filterOptions.status == "" ||
+                  characterForFilter.status.toLowerCase() ==
+                    filterOptions.status.toLowerCase()) &&
+                (filterOptions.species == "" ||
+                  characterForFilter.species.toLowerCase() ==
+                    filterOptions.species.toLowerCase()) &&
+                (filterOptions.type == "" ||
+                  characterForFilter.type.toLowerCase() ==
+                    filterOptions.type.toLowerCase())
             )
             .map((character) => (
               <Link
@@ -112,13 +122,24 @@ export const Characters = () => {
         {!error &&
           searchName &&
           characters &&
-          characters.filter((characterForFilter) =>
-          characterForFilter.name.toLowerCase().includes(searchName.toLowerCase())
-          && (filterOptions.gender=='' || characterForFilter.gender.toLowerCase()==filterOptions.gender.toLowerCase())
-          && (filterOptions.status=='' || characterForFilter.status.toLowerCase()==filterOptions.status.toLowerCase())
-          && (filterOptions.species=='' || characterForFilter.species.toLowerCase()==filterOptions.species.toLowerCase())
-          && (filterOptions.type=='' || characterForFilter.type.toLowerCase()==filterOptions.type.toLowerCase())
-          ).length === 0 && <PrintMsg msg={"notmatched"}>Not Matched</PrintMsg>}
+          characters.filter(
+            (characterForFilter) =>
+              characterForFilter.name
+                .toLowerCase()
+                .includes(searchName.toLowerCase()) &&
+              (filterOptions.gender == "" ||
+                characterForFilter.gender.toLowerCase() ==
+                  filterOptions.gender.toLowerCase()) &&
+              (filterOptions.status == "" ||
+                characterForFilter.status.toLowerCase() ==
+                  filterOptions.status.toLowerCase()) &&
+              (filterOptions.species == "" ||
+                characterForFilter.species.toLowerCase() ==
+                  filterOptions.species.toLowerCase()) &&
+              (filterOptions.type == "" ||
+                characterForFilter.type.toLowerCase() ==
+                  filterOptions.type.toLowerCase())
+          ).length === 0 && <PrintMsg msg={"message"}>Not Matched</PrintMsg>}
 
         {/* when an error occured */}
         {error && <PrintMsg msg={"error"}>{error}</PrintMsg>}
