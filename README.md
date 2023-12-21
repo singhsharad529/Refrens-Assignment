@@ -1,73 +1,117 @@
-# React + Vite
+# Introduction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Assignment given by Refrens. It followes CRUD functionality ,searching and filtering features of multiple character cards by their details.
 
-Currently, two official plugins are available:
+### Technologies
+  - ReactJS + Vite for frontend
+  - Context API for state management
+  - Eslint to check potential error and syntax issues
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Assignment Name
 
-## Project Name & Pitch
+Refrens Assignment
 
-#### Example:
+This is an assignment from Refrens. The basic objectives of this assignment are:
+  - Character cards page with their details
+  - Character profie page with additional details like their episodes
+  - Ability to filter grid items on these fields (status, location, episode, gender, species, type)
+  - Ability to navigate to an individual Character’s profile. Implement the following details in each profile
 
-TweetWorld
+  Optional:
+  - Page to display Locations in a grid of cards 
+  - Page to display Episodes in a grid of cards
 
-An application used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
-
-## Project Status
+## Assignment Status
 
 (only necessary if incomplete)
 
 #### Example:
 
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to sort by additional parameters is in progress.
+All the important component has been completed but optional are left due to time issue.
+  Compeleted:
+  - Characters cards component
+  - Character profile component
+  - Functionality to search character by name
+  - Functionality to filter character details by their gender,status,type,species etc.
+  - Feature to show all the episodes name of a perticular character
 
-## Project Screen Shot(s)
+## Assignment Screen Shot(s)
 
-#### Example:
+![Alt text](image.png)
 
-[ PRETEND SCREEN SHOT IS HERE ]
 
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
 
-## Installation and Setup Instructions
+## Requirements
 
-#### Example:
+For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+### Node
 
-Installation:
+- #### Node installation on Windows
 
-`npm install`
+  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
+  Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
 
-To Run Test Suite:
+- #### Node installation on Ubuntu
 
-`npm test`
+  You can install nodejs and npm easily with apt install, just run the following commands.
 
-To Start Server:
+      $ sudo apt install nodejs
+      $ sudo apt install npm
 
-`npm start`
+- #### Other Operating Systems
+  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
 
-To Visit App:
+If the installation was successful, you should be able to run the following command.
 
-`localhost:3000/ideas`
+    $ node --version
+    v20.9.0
 
-## Reflection
+    $ npm --version
+    10.1.0
 
-- What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
-- What did you set out to build?
-- Why was this project challenging and therefore a really good learning experience?
-- What were some unexpected obstacles?
-- What tools did you use to implement this project?
-  - This might seem obvious because you are IN this codebase, but to all other humans now is the time to talk about why you chose webpack instead of create react app, or D3, or vanilla JS instead of a framework etc. Brag about your choices and justify them here.
+## Description
 
-#### Example:
+## To start setting up the project
 
-This was a 3 week long project built during my third module at Turing School of Software and Design. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
+Step 1: Clone the repo
 
-Originally I wanted to build an application that allowed users to pull data from the Twitter API based on what they were interested in, such as 'most tagged users'. I started this process by using the `create-react-app` boilerplate, then adding `react-router-4.0` and `redux`.
+```bash
+    git clone https://github.com/singhsharad529/Refrens-Assignment.git
+```
 
-One of the main challenges I ran into was Authentication. This lead me to spend a few days on a research spike into OAuth, Auth0, and two-factor authentication using Firebase or other third parties. Due to project time constraints, I had to table authentication and focus more on data visualization from parts of the API that weren't restricted to authenticated users.
+Step 2: cd into the cloned repo and run:
 
-At the end of the day, the technologies implemented in this project are React, React-Router 4.0, Redux, LoDash, D3, and a significant amount of VanillaJS, JSX, and CSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration I plan on handrolling a `webpack.config.js` file to more fully understand the build process.
+```bash
+    npm install
+```
+
+## Installation
+
+```bash
+    $ npm install
+
+```
+
+## Running the app
+
+```bash
+# development
+    $ npm run dev
+
+```
+
+**Added a lint file there called: .eslintrc.json**
+## Lint file testing
+```bash
+    $ npm run lint
+
+```
+
+## Author
+
+- [**Sharad Kumar Singh**](https://singhsharad529.github.io/sharad-portfolio/)
+
+```
+
+```
