@@ -75,13 +75,13 @@ If the installation was successful, you should be able to run the following comm
 Step 1: Clone the repo
 
 ```bash
-    git clone https://github.com/singhsharad529/Refrens-Assignment.git
+   $ git clone https://github.com/singhsharad529/Refrens-Assignment.git
 ```
 
 Step 2: cd into the cloned repo and run:
 
 ```bash
-    npm install
+   $ npm install
 ```
 
 ## Installation
