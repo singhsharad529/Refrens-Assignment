@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Assignment given by Refrens. It followes CRUD functionality ,searching and filtering features of multiple character cards by their details.
 
@@ -23,8 +23,6 @@ This is an assignment from Refrens. The basic objectives of this assignment are:
 
 ## Assignment Status
 
-(only necessary if incomplete)
-
 #### Example:
 
 All the important component has been completed but optional are left due to time issue.
@@ -37,8 +35,8 @@ All the important component has been completed but optional are left due to time
 
 ## Assignment Screen Shot(s)
 
-![Alt text](image.png)
-
+![Alt text](image.png) ![Alt text](image-2.png)
+![Alt text](image-3.png) ![Alt text](image-4.png)
 
 
 ## Requirements
@@ -107,6 +105,7 @@ Step 2: cd into the cloned repo and run:
     $ npm run lint
 
 ```
+
 
 ## Author
 
