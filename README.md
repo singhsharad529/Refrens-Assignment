@@ -33,7 +33,7 @@ All the important component has been completed but optional are left due to time
   - Functionality to filter character details by their gender,status,type,species etc.
   - Feature to show all the episodes name of a perticular character
 
-## Assignment Screen Shot(s)
+## Assignment Screen Shots of deployed url (https://refrens-assignment.netlify.app/characters)
 
 ![Alt text](image.png) ![Alt text](image-2.png)
 ![Alt text](image-3.png) ![Alt text](image-4.png)
