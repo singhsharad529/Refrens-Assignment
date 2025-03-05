@@ -23,19 +23,21 @@ import { useEffect } from "react";
 
 ReactGA.initialize("G-9FBWEF45LV");
 
-function App() {
+function AnalyticsTracker() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      page: location.pathname,
-    });
-  }, [location]);
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]); // ✅ Correct dependency
 
+  return null; // This component doesn't render anything
+}
+
+function App() {
   return (
     <>
       <Router>
+        <AnalyticsTracker /> {/* ✅ Ensures GA tracks page views correctly */}
         <Header />
         <div className="middle-section">
           <Routes>
