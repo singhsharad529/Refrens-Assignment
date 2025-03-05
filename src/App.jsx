@@ -11,6 +11,7 @@ import { Locations } from "./components/locationCards/Locations";
 import { Episodes } from "./components/episodesCards/Episodes";
 import CharacterContextLayout from "./context/characterContext/CharacterContextLayout";
 import { CharacterProfile } from "./components/charactersProfile/CharacterProfile";
+import { TestComponent } from "./components/testcomponent/TestComponent";
 
 /*
   - Main component 
@@ -41,6 +42,7 @@ function App() {
             </Route>
             <Route exact path="/episodes" element={<Episodes />} />
             <Route exact path="/locations" element={<Locations />} />
+            <Route exact path="/test-route" element={<TestComponent />} />
           </Routes>
         </div>
       </Router>
