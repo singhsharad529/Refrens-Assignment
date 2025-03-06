@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { CharacterSearchBar } from "../../screens/CharacterSearchBar";
 import { CharacterFilterBar } from "../../screens/CharacterFilterBar";
 import { PrintMsg } from "../../screens/PrintMsg";
-
+import ReactGA from "react-ga4";
 /*
     - This will print all the characters with there information.
     - The rendering will be happend with sorting logics.
@@ -35,6 +35,30 @@ export const Characters = () => {
     // console.log(e.target.name,' ',e.target.value);
     setfilterOptions((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     console.log(filterOptions);
+  };
+
+  const testAnalytics = () => {
+    ReactGA.event({
+      category: "Submitting Form 1",
+      action: "testing analytics four",
+      label: "optional lable", // optional
+    });
+
+    console.log("analytics testing");
+
+    return;
+  };
+
+  const testAnalytics2 = () => {
+    ReactGA.event({
+      category: "Submitting Form 1",
+      action: "testing analytics five",
+      label: "optional lable", // optional
+    });
+
+    console.log("analytics testing 2");
+
+    return;
   };
 
   return (
@@ -144,6 +168,9 @@ export const Characters = () => {
         {/* when an error occured */}
         {error && <PrintMsg msg={"error"}>{error}</PrintMsg>}
       </div>
+
+      <button onClick={testAnalytics}>Testing Analytics</button>
+      <button onClick={testAnalytics2}>Testing Analytics 2</button>
     </>
   );
 };
